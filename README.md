@@ -1,4 +1,7 @@
 # 🚀 Recession Predictor
+[![Python Tests](https://github.com/SidharthaManriquez44/csv_to_mysql/actions/workflows/python-app.yml/badge.svg)](https://github.com/SidharthaManriquez44/csv_to_mysql/actions/workflows/python-app.yml)
+[![codecov](https://codecov.io/github/SidharthaManriquez44/recession-predictor/graph/badge.svg?token=C8TA3LLQ7L)](https://codecov.io/github/SidharthaManriquez44/recession-predictor)
+
 
 **Recession Predictor** is a machine learning project that aims to forecast potential future recessions using macroeconomic indicators and a neural network built with TensorFlow and Keras.
 
