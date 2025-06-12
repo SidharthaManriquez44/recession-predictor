@@ -25,22 +25,18 @@ This project is developed in **Python** and uses libraries such as `pandas`, `sc
 - ✅ Visualization of training loss and validation loss
 - ✅ Final prediction on most recent data
 
----
+## 🧱 Project Structure
 
-## 🧠 Technologies Used
-
-- Python 3.9+
-- TensorFlow / Keras
-- Scikit-learn
-- Pandas
-- Pandas DataReader
-- Matplotlib
-
----
-
-## 📁 Project Structure
-
-recession_predictor/ │ ├── src/ # Core logic and modules │ └── predictor.py ├── main.py # Main entry point for training and prediction ├── requirements.txt # Dependencies ├── README.md └── .gitignore
+```plaintext
+recession-predictor/
+├── src/               # Core logic and configuration
+├── test/              # Test of the logic
+├── .gitignore                   
+├── LICENSE            # License of the project
+├── main.py            # Entry point
+├── README.md
+└── requirements.txt   # Requiremente of teh project
+```
 
 ## ▶️ How to Run
 
@@ -59,8 +55,18 @@ recession_predictor/ │ ├── src/ # Core logic and modules │ └── p
    ```
    
 ## 🧪 Testing
-(Coming soon...) Unit tests will be added in future versions using pytest.
+```bash
+  pytest
+```
 
+## 🧹 Code Quality
+
+   Lint, sort imports, and check types:
+```bash
+make lint
+make format
+make type-check
+```
 
 ## 📄 License
 

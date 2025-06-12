@@ -1,4 +1,6 @@
-from src.predictor import download_data, prepare_data, build_model
+from src.data import download_data, prepare_data
+from src.model import build_model
+from src.predictor import predict_recession
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
 
@@ -13,19 +15,15 @@ def main():
     y_pred = (model.predict(X_test) > 0.5).astype("int32")
     print("Model Accuracy:", accuracy_score(y_test, y_pred))
 
-    # Graphic
     plt.plot(history.history['loss'], label='Training loss')
     plt.plot(history.history['val_loss'], label='Validation loss')
     plt.legend()
-    plt.title('Evolution of loss')
+    plt.title('Loss over Epochs')
     plt.show()
 
     latest_data = df.drop(columns=["Recession"]).iloc[-1:].values
-    latest_scaled = scaler.transform(latest_data)
-    prediction = model.predict(latest_scaled)
-
-    print("There will be a recession soon?", "Yes" if prediction[0][0] > 0.5 else "No")
-
+    will_recession = predict_recession(model, scaler, latest_data)
+    print("Will there be a recession soon?", "Yes" if will_recession else "No")
 
 if __name__ == "__main__":
     main()
