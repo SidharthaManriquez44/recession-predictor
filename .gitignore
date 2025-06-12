@@ -1,74 +1,38 @@
-# Python bytecode
+# Python files
 __pycache__/
 *.py[cod]
 *$py.class
+*.pic
 
-# Virtual environments
+# Virtual enviroment
 venv/
-env/
-ENV/
+.env/
 .venv/
-pip-selfcheck.json
+.env
 
-# Archivos de configuración de PyCharm
+# Pycharm
 .idea/
+.idea/inspectionProfiles/
+.idea
 *.iml
 
-#VSCode Configuration
-.vscode/
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Test and results files
-htmlcov/
-.tox/
-.nox/
-coverage.*
-.cache
+# pytest
 .pytest_cache/
-nosetests.xml
-test-results.xml
-junit-*.xml
+.coverage
+htmlcov/
 
-# Files logs
-*.log
-
-# Jupyter Notebooks
-.ipynb_checkpoints/
-
-# Temporary files
-*.swp
-*.swo
-.mypy_cache/
-
-
-# Temporary database files
-*.sqlite3
-
-# Environment or secret files
-.env
-.env.*
-
-# Packages and distribution
-*.egg
-*.egg-info/
-dist/
+# wrapper
 build/
+dist/
+*.egg-info
 
-# Ignore build folders
-/build/
-/dist/
+# Logs
+*.log/
+logs/*.log
 
-# Ignore executables
-*.exe
+# Files
+data/
+*.csv
 
-# Ignore PyInstaller configuration files
-*.spec
-
-# Other typical Python
-__pycache__/
-*.pyc
-.venv/
-env/
+# VSCode
+.vscode

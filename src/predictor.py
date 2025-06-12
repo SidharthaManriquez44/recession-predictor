@@ -1,14 +1,11 @@
-import pandas as pd
-import numpy as np
 from datetime import datetime
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from keras.models import Sequential
 from keras.layers import Dense, Dropout
-from sklearn.metrics import accuracy_score
 import pandas_datareader.data as web
 
-def descargar_datos():
+def download_data():
     indicators = {
         "GDP": "GDP",
         "Unemployment": "UNRATE",
@@ -26,14 +23,14 @@ def descargar_datos():
     df = df.drop(columns=["GDP", "Inflation"])
     return df.dropna()
 
-def preparar_datos(df):
+def prepare_data(df):
     X = df.drop(columns=["Recession"])
     y = df["Recession"]
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
     return train_test_split(X_scaled, y, test_size=0.2, random_state=42), scaler
 
-def construir_modelo(input_dim):
+def build_model(input_dim):
     model = Sequential([
         Dense(64, activation='relu', input_shape=(input_dim,)),
         Dropout(0.2),
