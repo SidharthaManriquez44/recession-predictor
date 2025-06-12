@@ -6,5 +6,5 @@ tensorflow~=2.19.0
 keras~=3.9.2
 keras-nightly~=3.10.0.dev2025050103
 matplotlib~=3.10.1
-pytest
-pytest-cov
+pytest~=8.2.0
+pytest-cov~=5.0.0
