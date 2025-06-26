@@ -45,7 +45,7 @@ recession-predictor/
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/recession-predictor.git
+   git clone https://github.com/SidharthaManriquez44/recession-predictor.git
    cd recession-predictor
     ```
 2. Install dependencies:
